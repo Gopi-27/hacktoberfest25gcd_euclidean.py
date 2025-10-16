@@ -1,7 +1,6 @@
 def gcd(a, b):
     while b != 0:
-        a = b
-        b = a % b  # ❌ Wrong order of update
+        a, b = b, a % b  # ✅ Correct simultaneous update
     return a
 
-print(gcd(48, 18))  # Expected 6
+print(gcd(48, 18))  # Output: 6
